@@ -2,25 +2,22 @@
     "total_pages": 1,
     "items": [
       {
-        "json": "champ.json",
-        "preview": "comp.png"
+        "json": "lastname.json",
+        "preview": "lastname.png"
       },
       {
-        "json": "champ.json",
-        "preview": "comp.png"
+        "json": "roof.json",
+        "preview": "roof.png"
       },
       {
-        "json": "champ.json",
-        "preview": "comp.png"
+        "json": "slogan.json",
+        "preview": "slogan.png"
       },
       {
-        "json": "comp.json",
-        "preview": "comp.png"
-      },
-      {
-        "json": "comp.json",
-        "preview": "comp.png"
+        "json": "star.json",
+        "preview": "star.png"
       }
+     
 
     ]
   }

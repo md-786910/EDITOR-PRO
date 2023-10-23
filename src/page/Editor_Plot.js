@@ -25,23 +25,25 @@ const sections = [TemplatesSection, ...DEFAULT_SECTIONS];
 function Editor_Plot() {
   return (
     <>
-    <button onClick={() => {
-      const json = store.toJSON()
+      <div className="btnDown">
+        <button className='btn_save_json' onClick={() => {
+          const json = store.toJSON()
 
-      const jsonData = JSON.stringify(json, null, 2);
+          const jsonData = JSON.stringify(json, null, 2);
 
-      const blob = new Blob([jsonData], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'data.json';
-      a.click();
-      URL.revokeObjectURL(url);
+          const blob = new Blob([jsonData], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'data.json';
+          a.click();
+          URL.revokeObjectURL(url);
 
-    }}>
-    save as json
-  </button>
-      <PolotnoContainer style={{ width: '100vw', height: '100vh' }} className="containerEditor">
+        }}>
+          save as json
+        </button>
+      </div>
+      <PolotnoContainer style={{ width: '100vw', height: '100vh'}} className="containerEditor">
         <SidePanelWrap>
           <SidePanel store={store}
             sections={sections}
@@ -56,7 +58,7 @@ function Editor_Plot() {
         </WorkspaceWrap>
       </PolotnoContainer>
 
-   
+
     </>
   )
 }
